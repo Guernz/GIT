@@ -24,7 +24,7 @@ public class Bouton extends JButton{
 	      } 
 	    catch (IOException e) {
 	        e.printStackTrace();
-	      }
+	    }
 	}
 
 }
