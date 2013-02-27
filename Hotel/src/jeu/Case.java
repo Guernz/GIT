@@ -4,6 +4,8 @@ public class Case {
 	
 	boolean noirInt;
 	boolean noirExt;
+	boolean entreeInt = false;
+	boolean entreeExt = false;
 	int type;
 	//type de case :
 	// - depart (1)
@@ -19,6 +21,34 @@ public class Case {
 		this.type=type;
 		this.noirInt=noirInt;
 		this.noirExt=noirExt;
+	}
+	
+	public boolean isEntreeInt() {
+		return entreeInt;
+	}
+
+	public void setEntreeInt(boolean entreeInt) {
+		this.entreeInt = entreeInt;
+	}
+
+	public boolean isEntreeExt() {
+		return entreeExt;
+	}
+
+	public void setEntreeExt(boolean entreeExt) {
+		this.entreeExt = entreeExt;
+	}
+
+	public boolean isNoirInt() {
+		return noirInt;
+	}
+
+	public boolean isNoirExt() {
+		return noirExt;
+	}
+
+	public int getType() {
+		return type;
 	}
 	
 }

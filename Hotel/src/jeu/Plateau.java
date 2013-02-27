@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Plateau {
 
-	int nbCase=31;
+	static int nbCase=31;
 	static ArrayList<Case> plateau = new ArrayList<Case>();
 	
 	public Plateau(){
@@ -69,7 +69,7 @@ public class Plateau {
 		plateau.add(case29);
 		Case case30 = new Case(2,true,true);
 		plateau.add(case30);
-		Case case31 = new Case(5,false,true);
+		Case case31 = new Case(4,false,true);
 		plateau.add(case31);
 	}
 }

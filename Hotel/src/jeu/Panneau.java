@@ -22,6 +22,10 @@ public class Panneau extends JPanel{
 	    } catch (IOException e) {
 	      e.printStackTrace();
 	    }                
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}  
 
 }

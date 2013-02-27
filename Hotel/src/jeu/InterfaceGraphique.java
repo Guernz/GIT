@@ -1,17 +1,18 @@
 package jeu;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
+import java.awt.*;
+import java.awt.event.*;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class InterfaceGraphique extends JFrame {
+public class InterfaceGraphique extends JFrame{
 	
+	Panneau panneau = new Panneau("cover.png");
 	private Bouton boutonJouer = new Bouton("Jouer");
 	private Bouton boutonQuitter = new Bouton("Quitter");
-  
+	
 	public InterfaceGraphique(){
 		//Définit un titre pour notre fenêtre
 	    this.setTitle("Jeu de société Hotel");
@@ -22,11 +23,27 @@ public class InterfaceGraphique extends JFrame {
 	    //Termine le processus lorsqu'on clique sur la croix rouge
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
 	    //On prévient notre JFrame que notre JPanel sera son content pane
-	    this.setContentPane(new Panneau("cover.png")); 
+	    this.setContentPane(panneau); 
+	    boutonJouer.addActionListener(new BoutonJouer());
+	    boutonQuitter.addActionListener(new BoutonQuitter());
 	    this.add(boutonJouer);
 	    this.add(boutonQuitter);
 	    //On rend la fenetre visible
 	    this.setVisible(true);
 	}
 	
-}
+	class BoutonJouer implements ActionListener{
+	    public void actionPerformed(ActionEvent arg0) {
+	    	panneau.setImage("plateau.png");
+	    	setContentPane(panneau);
+	    	remove(boutonJouer);
+	    }
+	  }
+	       
+	  class BoutonQuitter implements ActionListener{
+	    public void actionPerformed(ActionEvent e) { 
+	    	System.exit(0);
+	    }
+	  } 
+	  
+}	

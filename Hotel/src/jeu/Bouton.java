@@ -1,9 +1,5 @@
 package jeu;
 
-import java.awt.Color;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
@@ -19,12 +15,16 @@ public class Bouton extends JButton{
 	public Bouton(String nom){
 	    super(nom);
 	    this.nom = nom;
+	    /*
 	    try {
 	        img = ImageIO.read(new File("fondBouton.png"));
 	      } 
 	    catch (IOException e) {
 	        e.printStackTrace();
 	      }
+	      */
 	}
+	
+	  
 
 }
