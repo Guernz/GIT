@@ -20,7 +20,6 @@ public class Boomerang extends Hotel{
 		casePlateau[1]=Plateau.plateau.get(3);
 		casePlateau[2]=Plateau.plateau.get(4);
 		casePlateau[3]=Plateau.plateau.get(5);
-		iejpzoejpfef;
 	}
 
 }
